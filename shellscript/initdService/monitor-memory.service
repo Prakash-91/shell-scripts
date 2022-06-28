@@ -1,0 +1,11 @@
+[Unit]
+Description=Memory monitor service 
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/free-memory.sh
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
